@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cookbook</string>
+    <string name="title_recipe_detail">Recipe Detail</string>
+    <string name="recipe_image">recipe_image</string>
+    <string name="title_collection_detail">Collection Detail</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_ingredients">IngredientsActivity</string>
+
+    <string-array name="units_array">
+        <item>tbsp</item>
+        <item>tsp</item>
+        <item>lb</item>
+        <item>cup</item>
+        <item>cube</item>
+    </string-array>
+
+    <string name="TITLE_NEW_RECIPE">New Recipe</string>
+    <string name="TEXT_OK">OK</string>
+    <string name="TEXT_CANCEL">CANCEL</string>
+
+    <string name="TEXT_NONE">None</string>
+    <string name="TEXT_DEFAULT_TIME">00:00</string>
+    <string name="TEXT_NO_NOTES_FOUND">No notes found</string>
+    <string name="TEXT_NO_INGREDIENTS_FOUND">No ingredients found</string>
+    <string name="TEXT_NO_STEPS_FOUND">No steps found</string>
+    <string name="TEXT_SELECT_COLLECTION">Select Collection</string>
+    <string name="TEXT_SELECT_CUISINE">Select Cuisine</string>
+    <string name="TEXT_SET_COOK_TIME">Set Cook Time</string>
+    <string name="TEXT_SET_PREP_TIME">Set Prep. Time</string>
+    <string name="TEXT_FIND_RECIPE">Find Recipe</string>
+    <string name="CONFIRM_DELETE_ALL_INGREDIENT">Delete all ingredients?</string>
+    <string name="CONFIRM_DELETE_SINGLE_INGREDIENT">Delete this ingredient?</string>
+    <string name="TEXT_SEARCH_RESULT">Search Results</string>
+    <string name="TEXT_DELETE_SINGLE_STEP">Delete this step?</string>
+    <string name="TEXT_DELETE_ALL_STEPS">Delete all steps?</string>
+    <string name="CONFIRM_DELETE_SINGLE_RECIPE">Delete Recipe</string>
+    <string name="CONFIRM_DELETE_RECIPE_PERMANENTLY">Delete this recipe permanently?</string>
+    <string name="OPTION_TAKE_PHOTO">Take Photo</string>
+    <string name="OPTION_CHOOSE_FROM_GALLERY">Choose from Gallery</string>
+    <string name="OPTION_CANCEL">Cancel</string>
+    <string name="TEXT_ADD_PHOTO">Add Photo</string>
+    <string name="TEXT_SELECT_FILE">Select File</string>
+    <string name="CONFIRM_REMOVE_MULTI_RECIPES">Remove recipe(s) from collection?</string>
+    <string name="CONFIRM_DELETE_COLLECTION">Delete Collection</string>
+    <string name="TEXT_MOVE_TO_COLLECTION">Move to Collection</string>
+    <string name="TEXT_NEW_COLLECTION_HINT">New collection title</string>
+    <string name="TEXT_NEW_COLLECTION">New Collection</string>
+    <string name="TEXT_RENAME_COLLECTION">Rename Collection</string>
+    <string name="CONFIRM_DELETE_COLLECTION_MSG">Delete this collection? Recipes will not be deleted. You can still find them in Recipes section.</string>
+
+    <string name="TEXT_SELECTED_COUNT">%1$d selected</string>
+    <string name="TEXT_INGREDIENTS">%1$d ingredient(s)</string>
+    <string name="TEXT_STEPS">%1$d step(s)</string>
+    <string name="CONFIRM_DELETE_MULTI_COLLECTION_MSG">Delete %1$d collection(s)? Recipes will not
+        be deleted. You can still find them in Recipes section.</string>
+    <string name="CONFIRM_REMOVE_MULTI_RECIPES_MSG">Remove %1$d recipe(s) from this collection?
+        Recipes will not be deleted. You can still find them in Recipes section.</string>
+    <string name="CONFIRM_DELETE_MULTI_RECIPE_MSG">Delete %1$d recipe(s) permanently?</string>
+
+    <string name="move_recipe">Move Recipe</string>
+    <string name="delete_recipe">Delete Recipe</string>
+    <string name="edit_recipe">Edit Recipe</string>
+    <string name="save_recipe">Save Recipe</string>
+    <string name="sort_by_last_added">Sort by Recently Added</string>
+    <string name="sort_by_title">Sort by Title</string>
+    <string name="new_recipe">New Recipe</string>
+    <string name="search_recipe">Search a Recipe</string>
+    <string name="delete_all_ingredients">Delete All Ingredients</string>
+    <string name="new_ingredient">New Ingredient</string>
+    <string name="reset">Clear</string>
+    <string name="delete_collection">Delete Collection</string>
+    <string name="edit_collection">Edit Collection</string>
+    <string name="recipe_photo">recipe image</string>
+    <string name="prep_time_text">Prep. Time</string>
+    <string name="cook_time_text">Cook Time</string>
+    <string name="Yields">Yields</string>
+    <string name="hint_yields">0</string>
+    <string name="calories_text">Calories</string>
+    <string name="hint_calories">0</string>
+    <string name="hint_recipe_name">Recipe title</string>
+    <string name="cuisine_view_only_text">CUISINE: </string>
+    <string name="option_none">None</string>
+    <string name="collection_view_only_text">COLLECTION: </string>
+    <string name="website_view_only_text">WEBSITE: </string>
+    <string name="ingredients_text">Ingredients</string>
+    <string name="no_ingredients_text">No ingredients found</string>
+    <string name="instructions_text">Instructions</string>
+    <string name="no_steps_text">No steps found</string>
+    <string name="notes_text">Notes</string>
+    <string name="no_notes_text">No notes found</string>
+    <string name="recipe_title_text">Title</string>
+    <string name="zero_ingredients">0 ingredient(s)</string>
+    <string name="zero_steps">0 step(s)</string>
+    <string name="hint_notes">Notes</string>
+    <string name="collection_text">Collection</string>
+    <string name="zero_selected">0 selected</string>
+    <string name="cuisine_text">Cuisine</string>
+    <string name="website_text">Website</string>
+    <string name="hint_website">http://www.example.com</string>
+    <string name="prefix_step_text">Step</string>
+    <string name="hint_enter_instruction">Enter Instructions</string>
+    <string name="prep_text">Prep.</string>
+    <string name="cook_text">Cook</string>
+    <string name="hint_quantity">Ex. 2</string>
+    <string name="hint_ingredient_name">Ex. Cheese</string>
+    <string name="collection_title_text">Collection title</string>
+    <string name="zero_recipe_count">0</string>
+    <string name="suffix_items_text">item(s)</string>
+    <string name="hint_ingredients">Ex. carrot,peas,milk etc.</string>
+    <string name="operator_equals">=</string>
+    <string name="operator_less_than_equals"><![CDATA[<=]]></string>
+    <string name="operator_greater_than_equals"><![CDATA[>=]]></string>
+    <string name="reset_btn_text">CLEAR</string>
+    <string name="collection_image">collection image</string>
+    <string name="delete_btn_image">delete button image</string>
+    <string name="no_recipe_image">no recipe image</string>
+    <string name="time_icon">prep_time icon</string>
+    <string name="cook_time_icon">time icon</string>
+    <string name="delete_steps_icon">delete steps</string>
+    <string name="next_button">next</string>
+
+</resources>

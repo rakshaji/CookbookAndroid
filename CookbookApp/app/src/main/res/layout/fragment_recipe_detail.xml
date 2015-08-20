@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--add/ edit view-->
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:id="@+id/edit_scroll_view"
+        >
+
+    <LinearLayout   android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:id="@+id/child1_layout"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/noRecipeImage"
+            android:contentDescription="@string/recipe_photo"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_action_new_picture_light"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/recipeImage"
+            android:contentDescription="@string/recipe_photo"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recipeImage"
+            android:layout_alignParentStart="true">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:showDividers="beginning|end"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/recipe_title_text"
+                    android:id="@+id/title_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"/>
+
+                <EditText
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/title_text"
+                    android:layout_column="1"
+                    android:hint="@string/hint_recipe_name"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:gravity="center_vertical|end"
+                    android:textSize="15sp"
+                    android:padding="2dp"
+                    android:layout_marginRight="10dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:showDividers="beginning|end"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/Yields"
+                    android:id="@+id/yields_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"/>
+
+                <EditText
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/yields_text"
+                    android:layout_column="1"
+                    android:hint="2"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:gravity="center_vertical|end"
+                    android:textSize="15sp"
+                    android:padding="2dp"
+                    android:layout_marginRight="10dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/calories_text"
+                    android:id="@+id/calories_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"/>
+
+                <EditText
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/calorie_text"
+                    android:layout_column="1"
+                    android:hint="@string/hint_calories"
+                    android:inputType="numberDecimal"
+                    android:gravity="center_vertical|end"
+                    android:textSize="15sp"
+                    android:padding="2dp"
+                    android:layout_marginRight="10dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:gravity="end">
+                <TextView/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/prep_time_text"
+                    android:id="@+id/prep_time_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"/>
+                <LinearLayout android:layout_column="1" android:id="@+id/prep_time_row">
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/prep_time_text"
+                        android:text="@string/TEXT_DEFAULT_TIME"
+                        android:gravity="center_vertical|end"
+                        android:textSize="15sp"
+                        android:padding="2dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/next_button"
+                        android:src="@drawable/ic_action_next_item_dark"/>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/cook_time_text"
+                    android:id="@+id/cook_time_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"/>
+
+                <LinearLayout android:layout_column="1" android:id="@+id/cook_time_row">
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/cook_time_text"
+                        android:text="@string/TEXT_DEFAULT_TIME"
+                        android:gravity="center_vertical|end"
+                        android:textSize="15sp"
+                        android:padding="2dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/next_button"
+                        android:src="@drawable/ic_action_next_item_dark"/>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                >
+                <TextView/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/ingredients_text"
+                    android:id="@+id/ingredients_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"/>
+
+                <LinearLayout android:layout_column="1" android:id="@+id/ingredient_row">
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/ingredients_text"
+                        android:hint="@string/zero_ingredients"
+                        android:gravity="center_vertical|end"
+                        android:textSize="15sp"
+                        android:padding="2dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/next_button"
+                        android:src="@drawable/ic_action_next_item_dark"/>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/instructions_text"
+                    android:id="@+id/steps_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"/>
+
+                <LinearLayout android:layout_column="1" android:id="@+id/steps_row">
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/steps_text"
+                        android:hint="@string/zero_steps"
+                        android:gravity="center_vertical|end"
+                        android:textSize="15sp"
+                        android:padding="2dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/next_button"
+                        android:src="@drawable/ic_action_next_item_dark"/>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+                <LinearLayout android:layout_column="0" android:layout_span="2" android:orientation="vertical">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:id="@+id/notes_text"
+                        android:inputType="textCapSentences"
+                        android:hint="@string/hint_notes"
+                        android:textSize="15sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:padding="2dp"
+                        android:gravity="top"
+                        android:textColorHint="@color/accent_material_dark"/>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                >
+                <TextView/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/collection_text"
+                    android:id="@+id/collection_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"/>
+
+                <LinearLayout android:layout_column="1" android:id="@+id/collection_row">
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/collection_text"
+                        android:layout_column="1"
+                        android:hint="@string/zero_selected"
+                        android:gravity="center_vertical|end"
+                        android:singleLine="true"
+                        android:lines="1"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:textSize="15sp"
+                        android:padding="2dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/next_button"
+                        android:src="@drawable/ic_action_next_item_dark"/>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/cuisine_text"
+                    android:id="@+id/cuisine_label"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"/>
+
+                <LinearLayout android:layout_column="1" android:id="@+id/cuisine_row">
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/cuisine_text"
+                        android:hint="@string/zero_selected"
+                        android:gravity="center_vertical|end"
+                        android:textSize="15sp"
+                        android:padding="2dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/next_button"
+                        android:src="@drawable/ic_action_next_item_dark"/>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                >
+                <TextView/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/website_text"
+                    android:id="@+id/website_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"/>
+
+                <EditText
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/website_text"
+                    android:layout_column="1"
+                    android:inputType="textWebEmailAddress"
+                    android:hint="@string/hint_website"
+                    android:gravity="center_vertical|end"
+                    android:textSize="15sp"
+                    android:padding="2dp"
+                    android:layout_marginRight="10dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                >
+                <TextView/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    </ScrollView>

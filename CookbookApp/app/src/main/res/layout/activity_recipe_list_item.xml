@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="@drawable/list_selector">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/recipeImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_action_picture_dark"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/no_recipe_image"/>
+
+        <TextView
+            android:id="@+id/recipeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/hint_recipe_name"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_alignTop="@+id/recipeImage"
+            android:layout_toEndOf="@+id/recipeImage"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:id="@+id/prep_time_label"
+            android:text="@string/prep_text"
+            android:layout_alignTop="@+id/prep_time_icon"
+            android:layout_alignStart="@+id/recipeName"
+            android:textSize="12sp"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/prep_time_icon"
+            android:src="@drawable/ic_action_time_dark"
+            android:layout_alignBottom="@+id/recipeImage"
+            android:layout_toEndOf="@+id/prep_time_label"
+            android:contentDescription="@string/time_icon"/>
+
+        <TextView
+            android:id="@+id/prep_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/TEXT_DEFAULT_TIME"
+            android:layout_alignTop="@+id/prep_time_icon"
+            android:layout_toEndOf="@+id/prep_time_icon"
+            android:textSize="12sp"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/cook_time_label"
+            android:text="@string/cook_text"
+            android:layout_alignBottom="@+id/prep_time_text"
+            android:layout_toEndOf="@+id/prep_time_text"
+            android:textSize="12sp"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/cook_time_icon"
+            android:src="@drawable/ic_action_time_dark"
+            android:layout_alignBottom="@+id/recipeImage"
+            android:layout_toEndOf="@+id/cook_time_label"
+            android:contentDescription="@string/cook_time_icon"/>
+
+        <TextView
+            android:id="@+id/cook_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/TEXT_DEFAULT_TIME"
+            android:layout_alignTop="@+id/cook_time_icon"
+            android:layout_toEndOf="@+id/cook_time_icon"
+            android:textSize="12sp"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="@string/cuisine_text"
+            android:id="@+id/cuisine_text"
+            android:layout_below="@+id/recipeName"
+            android:layout_alignStart="@+id/recipeName"
+            android:textStyle="italic"
+            android:layout_marginTop="3dp"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+</LinearLayout>

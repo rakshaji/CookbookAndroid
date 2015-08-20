@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              >
+
+    <EditText
+        android:layout_width="70dp"
+        android:layout_height="54dp"
+        android:hint="@string/hint_quantity"
+        android:id="@+id/quantity"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapSentences"/>
+
+    <Spinner
+        android:layout_width="70dp"
+        android:layout_height="54dp"
+        android:id="@+id/unit"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/quantity"/>
+
+    <EditText
+        android:layout_width="170dp"
+        android:layout_height="54dp"
+        android:hint="@string/hint_ingredient_name"
+        android:id="@+id/ingredient"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:selectAllOnFocus="true"
+        android:inputType="textCapSentences"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/unit"/>
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete"
+        android:src="@drawable/ic_action_discard_dark"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/ingredient"
+        android:contentDescription="@string/delete_btn_image"/>
+</RelativeLayout>

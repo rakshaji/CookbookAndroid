@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:orientation="vertical"
+               android:background="@drawable/list_selector">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/collectionImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_action_collection_dark"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/collection_image"/>
+
+        <TextView
+            android:id="@+id/collectionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/collection_title_text"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_alignTop="@+id/collectionImage"
+            android:layout_toEndOf="@+id/collectionImage"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:id="@+id/recipe_count"
+            android:text="@string/zero_recipe_count"
+            android:textSize="12sp"
+            android:layout_alignBottom="@+id/collectionImage"
+            android:layout_alignStart="@+id/collectionName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:id="@+id/items_label"
+            android:text="@string/suffix_items_text"
+            android:textSize="12sp"
+            android:layout_alignTop="@+id/recipe_count"
+            android:layout_toEndOf="@+id/recipe_count"/>
+
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--add/ edit view-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:id="@+id/edit_scroll_view"
+    >
+
+    <LinearLayout   android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:id="@+id/child1_layout"
+                    android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                >
+                <TextView/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:showDividers="beginning|end"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/recipe_title_text"
+                    android:id="@+id/title_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/title_text"
+                    android:layout_column="1"
+                    android:hint="@string/hint_recipe_name"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:gravity="center_vertical|end"
+                    android:textSize="15sp"
+                    android:padding="2dp"
+                    android:layout_marginRight="10dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/ingredients_text"
+                    android:id="@+id/ingredients_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/ingredients_text"
+                    android:layout_column="1"
+                    android:hint="@string/hint_ingredients"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:gravity="center_vertical|end"
+                    android:textSize="15sp"
+                    android:padding="2dp"
+                    android:layout_marginRight="10dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                >
+                <TextView/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:showDividers="beginning|end"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/Yields"
+                    android:id="@+id/yields_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"
+                    android:textSize="15sp"/>
+
+                <LinearLayout android:layout_column="1" android:id="@+id/yields_row">
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="25dp"
+                        android:id="@+id/yields_condition">
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/operator_equals"
+                            android:id="@+id/radioButton10"
+                            android:checked="false"
+                            android:textSize="15sp"
+                            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.CheckBox"
+                            android:elegantTextHeight="false"
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/operator_less_than_equals"
+                            android:id="@+id/radioButton11"
+                            android:checked="true"
+                            android:textSize="15sp"
+                            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.CheckBox"
+                            android:elegantTextHeight="false"
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/operator_greater_than_equals"
+                            android:id="@+id/radioButton12"
+                            android:checked="false"
+                            android:textSize="15sp"
+                            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.CheckBox"
+                            android:elegantTextHeight="false"
+                            />
+                    </RadioGroup>
+                    <EditText
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/yields_text"
+                        android:hint="@string/hint_yields"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:gravity="center_vertical|end"
+                        android:textSize="15sp"
+                        android:padding="2dp"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/calories_text"
+                        android:id="@+id/calories_label"
+                        android:layout_column="0"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical|start"
+                        android:textColor="@color/accent_material_dark"
+                        android:textSize="15sp"/>
+                <LinearLayout android:layout_column="1" android:id="@+id/calories_row">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="25dp"
+                        android:id="@+id/calories_condition">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/operator_equals"
+                            android:id="@+id/radioButton7"
+                            android:checked="false"
+                            android:textSize="15sp"
+                            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.CheckBox"
+                            android:elegantTextHeight="false"
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/operator_less_than_equals"
+                            android:id="@+id/radioButton8"
+                            android:checked="true"
+                            android:textSize="15sp"
+                            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.CheckBox"
+                            android:elegantTextHeight="false"
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/operator_greater_than_equals"
+                            android:id="@+id/radioButton9"
+                            android:checked="false"
+                            android:textSize="15sp"
+                            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.CheckBox"
+                            android:elegantTextHeight="false"
+                            />
+                    </RadioGroup>
+
+                    <EditText
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/calorie_text"
+                        android:hint="@string/hint_calories"
+                        android:inputType="numberDecimal"
+                        android:gravity="center_vertical|end"
+                        android:textSize="15sp"
+                        android:padding="2dp"
+                        android:layout_marginRight="10dp"/>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/prep_time_text"
+                    android:id="@+id/prep_time_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"
+                    android:textSize="15sp"/>
+                <LinearLayout android:layout_column="1" android:id="@+id/prep_time_row">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="25dp"
+                        android:id="@+id/prep_condition">
+
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/operator_equals"
+                            android:id="@+id/radioButton"
+                            android:checked="false"
+                            android:textSize="15sp"
+                            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.CheckBox"
+                            android:elegantTextHeight="false"
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/operator_less_than_equals"
+                            android:id="@+id/radioButton2"
+                            android:checked="true"
+                            android:textSize="15sp"
+                            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.CheckBox"
+                            android:elegantTextHeight="false"
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/operator_greater_than_equals"
+                            android:id="@+id/radioButton3"
+                            android:checked="false"
+                            android:textSize="15sp"
+                            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.CheckBox"
+                            android:elegantTextHeight="false"
+                            />
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/prep_time_text"
+                        android:text="@string/TEXT_DEFAULT_TIME"
+                        android:gravity="center_vertical|end"
+                        android:textSize="15sp"
+                        android:padding="2dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/next_button"
+                        android:src="@drawable/ic_action_next_item_dark"/>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/cook_time_text"
+                    android:id="@+id/cook_time_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"
+                    android:textSize="15sp"/>
+
+                <LinearLayout android:layout_column="1" android:id="@+id/cook_time_row">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="25dp"
+                        android:id="@+id/cook_condition">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/operator_equals"
+                            android:id="@+id/radioButton4"
+                            android:checked="false"
+                            android:textSize="15sp"
+                            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.CheckBox"
+                            android:elegantTextHeight="false"
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/operator_less_than_equals"
+                            android:id="@+id/radioButton5"
+                            android:checked="true"
+                            android:textSize="15sp"
+                            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.CheckBox"
+                            android:elegantTextHeight="false"
+                            />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/operator_greater_than_equals"
+                            android:id="@+id/radioButton6"
+                            android:checked="false"
+                            android:textSize="15sp"
+                            style="@android:style/Widget.DeviceDefault.Light.CompoundButton.CheckBox"
+                            android:elegantTextHeight="false"
+                            />
+                    </RadioGroup>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:id="@+id/cook_time_text"
+                        android:text="@string/TEXT_DEFAULT_TIME"
+                        android:gravity="center_vertical|end"
+                        android:textSize="15sp"
+                        android:padding="2dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/next_button"
+                        android:src="@drawable/ic_action_next_item_dark"/>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                >
+                <TextView/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/collection_text"
+                    android:id="@+id/collection_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"
+                    android:textSize="15sp"/>
+
+                <LinearLayout android:layout_column="1" android:id="@+id/collection_row">
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/collection_text"
+                        android:hint="@string/zero_selected"
+                        android:gravity="center_vertical|end"
+                        android:singleLine="true"
+                        android:lines="1"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:textSize="15sp"
+                        android:padding="2dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/next_button"
+                        android:src="@drawable/ic_action_next_item_dark"/>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/cuisine_text"
+                    android:id="@+id/cuisine_label"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"
+                    android:textSize="15sp"/>
+
+                <LinearLayout android:layout_column="1" android:id="@+id/cuisine_row">
+                    <TextView
+                        android:layout_width="210dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/cuisine_text"
+                        android:hint="@string/zero_selected"
+                        android:gravity="center_vertical|end"
+                        android:textSize="15sp"
+                        android:padding="2dp"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/next_button"
+                        android:src="@drawable/ic_action_next_item_dark"/>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                >
+                <TextView/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/border" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/website_text"
+                    android:id="@+id/website_label"
+                    android:layout_column="0"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical|start"
+                    android:textColor="@color/accent_material_dark"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:layout_width="210dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/website_text"
+                    android:layout_column="1"
+                    android:inputType="textWebEmailAddress"
+                    android:hint="@string/hint_website"
+                    android:gravity="center_vertical|end"
+                    android:textSize="15sp"
+                    android:padding="2dp"
+                    android:layout_marginRight="10dp"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                >
+                <TextView/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>
